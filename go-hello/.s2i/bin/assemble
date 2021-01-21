@@ -5,8 +5,8 @@ rc=$?
 
 if [ $rc -eq 0 ]; then
 	echo "Creating file with build date"
-	DATE=`date %b`
-	echo $DATE > ./myinfo.html
+	DATE=`date "+%b %d"`
+	echo "build data: $DATE" > ./myinfo.html
 fi
 
 exit $rc
