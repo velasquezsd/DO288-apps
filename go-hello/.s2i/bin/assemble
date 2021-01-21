@@ -3,7 +3,7 @@
 /usr/libexec/s2i/assemble
 rc=$?
 
-if [ $rc -eq 0]; then
+if [ $rc -eq 0 ]; then
 	echo "Creating file with build date"
 	DATE=`date %b`
 	echo $DATE > ./myinfo.html
