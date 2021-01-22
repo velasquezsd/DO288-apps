@@ -1,0 +1,12 @@
+#!/bin/bash
+
+/usr/libexec/s2i/assemble
+rc=$?
+
+if [ $rc -eq 0 ]; then
+	echo "Generating file with build date"
+	DATE=`date "+%b %d"`
+	echo "My date: ($DATE)" > ./info.html
+fi
+
+exit $rc
